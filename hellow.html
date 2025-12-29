@@ -1,194 +1,156 @@
-<OCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>李玨瑩｜學生面試履歷</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>個人履歷網站</title>
 
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+/* 字型與品牌色設定 */
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background-color: #FFF8E3;
+  color: #1F4E3D;
+  line-height: 1.8;
+}
 
-  <style>
-    body {
-      scroll-behavior: smooth;
-    }
-    .hero {
-      padding: 4rem 0;
-    }
-    .section {
-      padding: 4rem 0;
-    }
-    .section-title {
-      margin-bottom: 2rem;
-    }
-  </style>
+.section-title {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1F4E3D;
+  border-left: 8px solid #F4C247;
+  padding-left: 12px;
+}
+
+/* 導覽列 */
+.navbar {
+  background-color: #1F4E3D;
+}
+.nav-link {
+  color: #FFF !important;
+  font-weight: 600;
+}
+.nav-link:hover {
+  color: #F4C247 !important;
+}
+
+/* 區塊背景交錯 */
+.section:nth-child(even) {
+  background-color: #FFFFFF;
+  padding: 60px 0;
+}
+.section:nth-child(odd) {
+  background-color: #FFF8E3;
+  padding: 60px 0;
+}
+
+/* 作品集輪播圖 */
+.portfolio-img {
+  max-width: 600px;
+  max-height: 380px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+  margin: 0 auto;
+}
+
+/* 輪播指示器 */
+.carousel-indicators button {
+  background-color: #1F4E3D;
+}
+
+/* Footer */
+footer {
+  background-color: #1F4E3D;
+  color: #FFF;
+  text-align: center;
+  padding: 15px 0;
+}
+</style>
 </head>
+
 <body>
 
-
-<div id="carouselExampleCaptions"
-     class="carousel slide"
-     data-bs-interval="false">
-
-
-<section id="about" class="hero">
-  <div class="container mt-5 pt-5">
-    <div class="row align-items-center">
-      <div class="col-md-4 text-center">
-        <img src="img/profile.jpg" class="img-fluid rounded-circle mb-3" alt="Profile" style="max-width:200px;">
-      </div>
-      <div class="col-md-8">
-        <h1>李玨瑩</h1>
-        <h5 class="text-muted">履歷網站</h5>
-        <p class="mt-3">
-          一件事情如果不做到最好，不做到極致，那為什麼要去做呢？
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-   <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://lh4.googleusercontent.com/proxy/KZOfTRazmNTS9wKtAI6sCcHjBhxx-wAbJXs7qf8ucbF0P5aaSjlxblhlMOM5_aJIuCh6UWtPC9v7FEf1gJ7gkbyyFOvyOS5k2r5fsieqS0vv3N4xV76lh8z3oLPv9e_qQG_gAmLKmloAF1xZGwjAbTKhZnAGwfrUZVed56o9" class="d-block w-100" alt="firs page">
-            <div class="carousel-caption d-none d-md-block">              
-              <h5>人生態度｜Life Philosophy</h5>
-              <p>專注當下、誠實感受，走在自己選擇的路上。</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://cdn.hk01.com/di/media/images/283785/org/e52007b7f9e34b2c666f81adf3102cf8.jpg/xJTlFhBlUCzU-Gvxk4JKzPURiy-xhqQQDlL7gg5S-4I" class="d-block w-100" alt="the second photo">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>生活節奏｜Life Rhythm</h5>
-              <p>在前進中找自由，在安靜中找方向。</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://i.pinimg.com/736x/a1/8f/e8/a18fe877788e1be2b60cd1537d404ce1.jpg" class="d-block w-100" alt="the third photo">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>行動準則｜Guiding Principle</h5>
-              <p>用行動累積經驗，用思考校準方向。</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
-  
-  <section id="experience" class="section bg-light">
-   <div class="container">
-    <div class="row">
-        <div class="col-sm-8">
-         <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        自我介紹
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>我是李玨瑩。目前是一名學生，來自台灣。我是一個重視感受與真誠的人，喜歡觀察人與人之間的互動，也習慣從日常中整理自己的想法。對我來說，理解事情的「為什麼」，往往比得到答案本身更重要。</strong> 在學習與創作過程中，我偏好循序漸進、把事情做好，不追求表面的華麗，而是在意內容是否真正傳達意義。面對感興趣的主題，我會主動探索、整理與反思，也樂於將複雜的內容轉化為清楚、有條理的表達。<code>我相信，好的溝通來自尊重與理解，而持續學習，能讓人慢慢成為更穩定、也更溫柔的自己 🤍
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        我的興趣
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>我喜歡騎車。對我而言，騎車不只是移動方式，而是一種讓思緒慢下來、與自己相處的時間。</strong> 在路上專注當下、感受風與節奏，是我放鬆與整理情緒的重要方式此外，我也關注影視與舞台表演，其中，王一博的作品與態度對我影響深刻。他在不同領域中展現出的專注、紀律與自我要求，<code>讓我學會以更認真的態度面對自己熱愛的事。
-      </div>
-    </div>
-  </div>
-</div> 
-
-          
-         
-<section id="experience" class="section bg-light">
-  <div class="container">
-    <h2 class="section-title">學歷</h2>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <strong>2022 – 至今</strong><br>
-        實踐大學｜東南智慧商務學士學位學程<br>
-        樂於助人，具校內系辦工讀經驗，熟悉文案與社群操作，能快速上手新環境。期望在社群行銷持續精進，為團隊帶來可量化成果。
-      </li>
-<section id="experience" class="section bg-light">
-  <div class="container">
-    <h2 class="section-title">工作經驗</h2>
-      <li class="list-group-item">
-        <strong>2023/9月-2024/6月</strong><br>
-        東南亞學程-系上工讀生 <br>
-        協助師長與同學溝通、整理資料、管理檔案，確保資訊清楚、易於存取，並參與系上活動籌備，提高執行能力。
-      </li>
-      <li class="list-group-item">
-        <strong>2024/9月-2025/6月</strong><br>
-       東南亞學程學會-美編與小編<br>
-        1.負責社群平台的美術設計，提升貼文吸引力。
-        2.製作宣傳素材，如海報、社群貼文、活動文宣，提高活動曝光度。
-        3.協助社群內容經營，策劃貼文，提高粉絲互動率。
-         </li>
-      <li class="list-group-item">
-        <strong>2025/5月-至今</strong><br>
-       旗山北極殿-社群小編<br>
-        1.經營廟宇社群平台，策劃文化相關貼文，提升民眾參與度。
-        2.記錄廟會活動，撰寫推廣內容，傳承傳統文化。
-        3.透過貼文與影音提升社群影響力，單篇貼文最高達3000+按讚。
-      </li>
+<!-- 🔹 導覽列 -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+  <a class="navbar-brand fw-bold" href="#">MY PORTFOLIO</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
+      <li class="nav-item"><a class="nav-link" href="#portfolio">作品集</a></li>
+      <li class="nav-item"><a class="nav-link" href="#experience">經歷</a></li>
+      <li class="nav-item"><a class="nav-link" href="#skills">技能</a></li>
     </ul>
   </div>
-</section>
-      
+</div>
+</nav>
 
-<section id="skills" class="section">
-  <div class="container">
-    <h2 class="section-title">技能</h2>
-    <div class="row">
-      <div class="col-md-8">
-        <p>海報製作</p>
-        <div class="progress mb-3"><div class="progress-bar" style="width:90%"></div></div>
-        <p>社群媒體管理</p>
-        <div class="progress mb-3"><div class="progress-bar" style="width:78%"></div></div>
+<!-- 📌 Hero + 關於我 -->
+<section id="about" class="section">
+  <div class="container mt-5 pt-5 text-center">
+    <h2 class="section-title">關於我</h2>
+    <p>我喜歡騎車，也喜歡影視與舞台作品。對我而言，騎車是整理情緒與思緒的方式，
+    而王一博的專注與紀律，更讓我學會以認真的態度面對熱愛的事。</p>
+    <p>做一件事，就要做到最好。因為我相信，用心投入的每一步，都是邁向極致的证明。</p>
+  </div>
+</section>
+
+<!-- 🎨 作品集展示 -->
+<section id="portfolio" class="section">
+  <div class="container text-center">
+    <h2 class="section-title">作品集展示</h2>
+
+    <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="img/LookingForU.png" class="portfolio-img" alt="作品1">
+          <p class="fw-bold mt-3">東南亞學會 ｜ 活動視覺設計</p>
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/IMG_7004.png" class="portfolio-img" alt="作品2">
+          <p class="fw-bold mt-3">東南亞學程 ｜ 社群宣傳設計</p>
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/poster.jpg" class="portfolio-img" alt="作品3">
+          <p class="fw-bold mt-3">旗山北極殿 ｜ 廟宇文化推廣</p>
+        </div>
+
       </div>
-      <div class="col-md-8">
-        <p>美工設計</p>
-        <div class="progress mb-3"><div class="progress-bar" style="width:75%"></div></div>
-        <p>影片製作</p>
-        <div class="progress mb-3"><div class="progress-bar" style="width:85%"></div></div>
+
+      <!-- 切換 -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+      <div class="carousel-indicators mt-3">
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2"></button>
       </div>
     </div>
   </div>
 </section>
 
+<!-- 📌 Footer -->
+<footer>
+  <p class="mb-0">© 2025 My Portfolio</p>
+</footer>
 
-    
-<section id="contact" class="section bg-dark text-white">
-  <div class="container">
-    <h2 class="section-title">聯絡方式</h2>
-    <p>Email：a112660303@gm7.usc.edu.tw</p>
-    <p>GitHub：<a href="https://github.com/yourusername" class="text-white" target="_blank">github.com/a112660303</a></p>
-  </div>
-</section>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
