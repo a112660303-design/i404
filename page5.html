@@ -1,1 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>個人履歷網站</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+/* 字型與品牌色設定 */
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background-color: #FFF8E3;
+  color: #1F4E3D;
+  line-height: 1.8;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1F4E3D;
+  border-left: 8px solid #F4C247;
+  padding-left: 12px;
+}
+
+/* 導覽列 */
+.navbar {
+  background-color: #1F4E3D;
+}
+.nav-link {
+  color: #FFF !important;
+  font-weight: 600;
+}
+.nav-link:hover {
+  color: #F4C247 !important;
+}
+
+/* 區塊背景交錯 */
+.section:nth-child(even) {
+  background-color: #FFFFFF;
+  padding: 60px 0;
+}
+.section:nth-child(odd) {
+  background-color: #FFF8E3;
+  padding: 60px 0;
+}
+
+/* 作品集輪播圖 */
+.portfolio-img {
+  max-width: 600px;
+  max-height: 380px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+  margin: 0 auto;
+}
+
+/* 輪播指示器 */
+.carousel-indicators button {
+  background-color: #1F4E3D;
+}
+
+/* Footer */
+footer {
+  background-color: #1F4E3D;
+  color: #FFF;
+  text-align: center;
+  padding: 15px 0;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🔹 導覽列 -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+  <a class="navbar-brand fw-bold" href="#">MY PORTFOLIO</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
+      <li class="nav-item"><a class="nav-link" href="#portfolio">作品集</a></li>
+      <li class="nav-item"><a class="nav-link" href="#experience">經歷</a></li>
+      <li class="nav-item"><a class="nav-link" href="#skills">技能</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+<!-- 📌 Hero + 關於我 -->
+<section id="about" class="section">
+  <div class="container mt-5 pt-5 text-center">
+    <h2 class="section-title">關於我</h2>
+    <p>我喜歡騎車，也喜歡影視與舞台作品。對我而言，騎車是整理情緒與思緒的方式，
+    而王一博的專注與紀律，更讓我學會以認真的態度面對熱愛的事。</p>
+    <p>做一件事，就要做到最好。因為我相信，用心投入的每一步，都是邁向極致的证明。</p>
+  </div>
+</section>
+
+<!-- 🎨 作品集展示 -->
+<section id="portfolio" class="section">
+  <div class="container text-center">
+    <h2 class="section-title">作品集展示</h2>
+
+    <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="img/LookingForU.png" class="portfolio-img" alt="作品1">
+          <p class="fw-bold mt-3">東南亞學會 ｜ 活動視覺設計</p>
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/IMG_7004.png" class="portfolio-img" alt="作品2">
+          <p class="fw-bold mt-3">東南亞學程 ｜ 社群宣傳設計</p>
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/poster.jpg" class="portfolio-img" alt="作品3">
+          <p class="fw-bold mt-3">旗山北極殿 ｜ 廟宇文化推廣</p>
+        </div>
+
+      </div>
+
+      <!-- 切換 -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+      <div class="carousel-indicators mt-3">
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 📌 Footer -->
+<footer>
+  <p class="mb-0">© 2025 My Portfolio</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
