@@ -253,6 +253,38 @@
   </div>
 </section>
 
+      <style>
+.portfolio-img {
+  width: 35%; /* 縮小圖片 */
+  max-width: 400px; /* 防止超大 */
+  height: auto;
+  border-radius: 18px;
+  object-fit: cover;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+/* Hover 放大效果 */
+.portfolio-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.caption-title {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+/* 手機調整圖片寬度 */
+@media (max-width: 768px) {
+  .portfolio-img {
+    width: 60%;
+  }
+}
+</style>
 
 </main>
 
