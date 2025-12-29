@@ -210,41 +210,32 @@
 
     <section id="portfolio" class="section">
   <div class="container">
-    <h2 class="section-title">作品集展示</h2>
+    <h2 class="section-title text-center mb-4">作品集展示</h2>
 
-    <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
+    <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+      <div class="carousel-inner text-center">
 
         <!-- 第一張作品 -->
         <div class="carousel-item active">
-          <img src="Looking For U.png" class="d-block w-100" alt="作品1">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>東南亞學會 ｜ 活動視覺設計</h5>
-            <p>負責規劃風格與版面，提升貼文辨識度。</p>
-          </div>
+          <img src="img/LookingForU.png" class="portfolio-img" alt="作品1">
+          <p class="caption-title">東南亞學會 ｜ 活動視覺設計</p>
         </div>
 
         <!-- 第二張作品 -->
         <div class="carousel-item">
-          <img src="IMG_7004.png" class="d-block w-100" alt="作品2">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>東南亞學程 ｜ 社群宣傳設計</h5>
-            <p>強化資訊傳遞，提升粉絲互動率。</p>
-          </div>
+          <img src="img/IMG_7004.png" class="portfolio-img" alt="作品2">
+          <p class="caption-title">東南亞學程 ｜ 社群宣傳設計</p>
         </div>
 
         <!-- 第三張作品 -->
         <div class="carousel-item">
-          <img src="海報製作.jpg" class="d-block w-100" alt="作品3">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>旗山北極殿 ｜ 廟宇文化推廣</h5>
-            <p>以傳統×現代視覺呈現文化魅力。</p>
-          </div>
+          <img src="img/poster.jpg" class="portfolio-img" alt="作品3">
+          <p class="caption-title">旗山北極殿 ｜ 廟宇文化推廣</p>
         </div>
 
       </div>
 
-      <!-- 左右切換按鈕 -->
+      <!-- 控制按鈕 -->
       <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </button>
@@ -252,6 +243,12 @@
         <span class="carousel-control-next-icon"></span>
       </button>
 
+      <!-- 小圓點導覽 -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2"></button>
+      </div>
     </div>
   </div>
 </section>
