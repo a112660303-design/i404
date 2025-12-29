@@ -139,9 +139,26 @@ footer {
     <div class="row align-items-center">
 
       <div class="col-md-4 text-center">
-        <!-- 📍大頭貼：請放於 img/ 資料夾，檔名自行修改 -->
-        <img src="img/profile.jpg" class="img-fluid rounded-circle" style="max-width:200px;" alt="Profile">
+  <!-- 🎞 小型自動輪播大頭貼 -->
+  <div id="profileCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+    <div class="carousel-inner">
+
+      <!-- 🖼️ 照片放這裡，替換 src -->
+      <div class="carousel-item active">
+        <img src="img/profile.jpg" class="d-block w-100 rounded-circle shadow" style="max-width:200px;" alt="Profile 1">
       </div>
+
+      <div class="carousel-item">
+        <img src="img/profile2.jpg" class="d-block w-100 rounded-circle shadow" style="max-width:200px;" alt="Profile 2">
+      </div>
+
+      <div class="carousel-item">
+        <img src="img/profile3.jpg" class="d-block w-100 rounded-circle shadow" style="max-width:200px;" alt="Profile 3">
+      </div>
+
+    </div>
+  </div>
+</div>
 
       <div class="col-md-8">
         <h1>李玨瑩</h1>
@@ -152,28 +169,6 @@ footer {
           這樣，每一步都更有意義，也能讓自己變得更穩定、踏實與完整。
         </p>
       </div>
-
-      <!-- 🎞 Hero 自動輪播展示 -->
-<div class="col-md-4 text-center">
-  <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="2500">
-    <div class="carousel-inner">
-
-      <!-- 📌照片放在這裡！替換 src -->
-      <div class="carousel-item active">
-        <img src="img/profile.jpg" class="d-block w-100" alt="hero1">
-      </div>
-
-      <div class="carousel-item">
-        <img src="img/hero2.jpg" class="d-block w-100" alt="hero2">
-      </div>
-
-      <div class="carousel-item">
-        <img src="img/hero3.jpg" class="d-block w-100" alt="hero3">
-      </div>
-
-    </div>
-  </div>
-</div>
 
     
     </div>
