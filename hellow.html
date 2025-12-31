@@ -507,22 +507,22 @@ footer {
   <div class="container">
     <h2 class="section-title">技能</h2>
 
-    <p>海報製作</p>
+    <p>海報製作 <span class="skill-value">0%</span></p>
     <div class="progress mb-3">
       <div class="progress-bar" data-width="90%"></div>
     </div>
 
-    <p>社群媒體管理</p>
+    <p>社群媒體管理 <span class="skill-value">0%</span></p>
     <div class="progress mb-3">
       <div class="progress-bar" data-width="80%"></div>
     </div>
 
-    <p>美編設計</p>
+    <p>美編設計 <span class="skill-value">0%</span></p>
     <div class="progress mb-3">
       <div class="progress-bar" data-width="75%"></div>
     </div>
 
-    <p>影片剪輯</p>
+    <p>影片剪輯 <span class="skill-value">0%</span></p>
     <div class="progress mb-3">
       <div class="progress-bar" data-width="70%"></div>
     </div>
@@ -536,24 +536,42 @@ footer {
   transition: width 2s ease-in-out; /* 動畫時間與曲線 */
   background-color: #a5ff8b !important;
 }
+
+.skill-value {
+  font-weight: bold;
+  float: right;
+}
 </style>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const skillsSection = document.querySelector('#skills');
   const bars = document.querySelectorAll('.progress-bar');
+  const values = document.querySelectorAll('.skill-value');
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if(entry.isIntersecting) {
-        bars.forEach(bar => {
-          const targetWidth = bar.getAttribute('data-width');
-          bar.style.width = targetWidth;
+        bars.forEach((bar, index) => {
+          const targetWidth = parseInt(bar.getAttribute('data-width'));
+          bar.style.width = targetWidth + '%';
+
+          // 動態數字
+          let current = 0;
+          const step = targetWidth / 50; // 50次更新
+          const interval = setInterval(() => {
+            current += step;
+            if(current >= targetWidth) {
+              current = targetWidth;
+              clearInterval(interval);
+            }
+            values[index].innerText = Math.round(current) + '%';
+          }, 40); // 50次 * 40ms = 約2秒
         });
-        observer.unobserve(skillsSection); // 只執行一次
+        observer.unobserve(skillsSection);
       }
     });
-  }, { threshold: 0.5 }); // 當50%出現在畫面才觸發
+  }, { threshold: 0.5 });
 
   observer.observe(skillsSection);
 });
