@@ -502,25 +502,62 @@ footer {
   </div>
 </section>
 
-<p>海報製作</p>
-<div class="progress mb-3">
-  <div class="progress-bar" data-width="90%"></div>
-</div>
+ <!-- 🧩 技能 -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="section-title">技能</h2>
 
-<p>社群媒體管理</p>
-<div class="progress mb-3">
-  <div class="progress-bar" data-width="80%"></div>
-</div>
+    <p>海報製作</p>
+    <div class="progress mb-3">
+      <div class="progress-bar" data-width="90%"></div>
+    </div>
 
-<p>美編設計</p>
-<div class="progress mb-3">
-  <div class="progress-bar" data-width="75%"></div>
-</div>
+    <p>社群媒體管理</p>
+    <div class="progress mb-3">
+      <div class="progress-bar" data-width="80%"></div>
+    </div>
 
-<p>影片剪輯</p>
-<div class="progress mb-3">
-  <div class="progress-bar" data-width="70%"></div>
-</div>
+    <p>美編設計</p>
+    <div class="progress mb-3">
+      <div class="progress-bar" data-width="75%"></div>
+    </div>
+
+    <p>影片剪輯</p>
+    <div class="progress mb-3">
+      <div class="progress-bar" data-width="70%"></div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.progress-bar {
+  width: 0; /* 從0開始 */
+  transition: width 2s ease-in-out; /* 動畫時間與曲線 */
+  background-color: #a5ff8b !important;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const skillsSection = document.querySelector('#skills');
+  const bars = document.querySelectorAll('.progress-bar');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        bars.forEach(bar => {
+          const targetWidth = bar.getAttribute('data-width');
+          bar.style.width = targetWidth;
+        });
+        observer.unobserve(skillsSection); // 只執行一次
+      }
+    });
+  }, { threshold: 0.5 }); // 當50%出現在畫面才觸發
+
+  observer.observe(skillsSection);
+});
+</script>
 
 
 <section id="portfolio" class="section">
