@@ -1,4 +1,6 @@
-```html
+html{
+    scroll-behavior:smooth;
+}
 <!doctype html>
 <html lang="zh-Hant">
 <head>
@@ -175,19 +177,20 @@ nav ul{
 
 <nav>
 <ul>
-<li><a href="#">首頁</a></li>
-<li><a href="#">熱門景點</a></li>
-<li><a href="#">旅遊攻略</a></li>
-<li><a href="#">特色美食</a></li>
-<li><a href="#">照片集</a></li>
-<li><a href="#">聯絡我們</a></li>
+<li><a href="#home">首頁</a></li>
+<li><a href="#about">關於胡志明市</a></li>
+<li><a href="#attractions">熱門景點</a></li>
+<li><a href="#mustvisit">必訪景點</a></li>
+<li><a href="#food">特色美食</a></li>
+<li><a href="#gallery">照片集</a></li>
+<li><a href="#contact">旅遊資訊</a></li>
 </ul>
 </nav>
 
 </div>
 </header>
 
-<div class="banner"></div>
+<div id="home" class="banner"></div>
 
 <section class="section">
 <div class="container">
@@ -213,7 +216,7 @@ nav ul{
 </div>
 </section>
 
-<section class="section">
+<section id="about" class="section">
 <div class="container">
 
 <h2>熱門景點</h2>
@@ -240,7 +243,7 @@ nav ul{
 </div>
 </section>
 
-<section class="section">
+<section id="attractions" class="section">
 <div class="container">
 
 <h2>必訪景點</h2>
@@ -268,8 +271,40 @@ nav ul{
 </div>
 </section>
 
-<section class="section">
+<section id="mustvisit" class="section">
 <div class="container">
+
+    <section id="food" class="section">
+<div class="container">
+
+<h2>特色美食</h2>
+
+<div class="services">
+
+<div class="service-box">
+<h3>越南河粉 Pho</h3>
+<p>越南最具代表性的國民美食。</p>
+</div>
+
+<div class="service-box">
+<h3>法國麵包 Bánh Mì</h3>
+<p>結合法式與越式風味的經典小吃。</p>
+</div>
+
+<div class="service-box">
+<h3>滴漏咖啡</h3>
+<p>體驗越南獨特咖啡文化。</p>
+</div>
+
+<div class="service-box">
+<h3>生春捲</h3>
+<p>清爽健康的越南特色料理。</p>
+</div>
+
+</div>
+
+</div>
+</section>
 
 <h2>景點照片</h2>
 
@@ -282,7 +317,7 @@ nav ul{
 </div>
 </section>
 
-<section class="section">
+<section id="gallery" class="section">
 <div class="container">
 
 <h2>旅遊資訊</h2>
@@ -297,11 +332,13 @@ nav ul{
 
 </div>
 </section>
-
+    
+<section id="contact" class="section">
+<div class="container">
+    
 <footer>
 © 2026 Explore Ho Chi Minh City. All Rights Reserved.
 </footer>
 
 </body>
 </html>
-```
