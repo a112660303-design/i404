@@ -1,6 +1,4 @@
-html{
-    scroll-behavior:smooth;
-}
+```html
 <!doctype html>
 <html lang="zh-Hant">
 <head>
@@ -9,6 +7,11 @@ html{
 <title>探索胡志明市</title>
 
 <style>
+
+html{
+    scroll-behavior:smooth;
+}
+
 *{
     margin:0;
     padding:0;
@@ -24,6 +27,9 @@ header{
     background:#0d6efd;
     color:white;
     padding:15px 0;
+    position:sticky;
+    top:0;
+    z-index:999;
 }
 
 .container{
@@ -45,16 +51,22 @@ nav ul{
     list-style:none;
     display:flex;
     gap:20px;
+    flex-wrap:wrap;
 }
 
 nav a{
     color:white;
     text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
 }
 
 .banner{
     height:500px;
-    background:url("images/hochiminh-banner.jpg") center center;
+    background:url("DJI_0550-HDR-Pano.jpg") center center;
     background-size:cover;
 }
 
@@ -126,6 +138,8 @@ nav a{
 .gallery img{
     width:100%;
     border-radius:10px;
+    height:250px;
+    object-fit:cover;
 }
 
 .contact{
@@ -164,6 +178,11 @@ footer{
 nav ul{
     flex-direction:column;
 }
+
+.banner{
+    height:300px;
+}
+
 }
 </style>
 </head>
@@ -192,7 +211,7 @@ nav ul{
 
 <div id="home" class="banner"></div>
 
-<section class="section">
+<section id="about" class="section">
 <div class="container">
 
 <h2>關於胡志明市</h2>
@@ -203,39 +222,10 @@ nav ul{
 
 <div class="about-text">
 <p>
-胡志明市（Ho Chi Minh City）是越南最大的城市，
-也是越南經濟與文化中心。
-這裡融合了法式殖民建築、現代摩天大樓、
-特色咖啡文化與豐富的越南美食，
-每年吸引數百萬名旅客前來探索。
+胡志明市（Ho Chi Minh City）是越南最大的城市，也是越南的經濟與文化中心。
+這裡融合了法式殖民建築、現代摩天大樓、熱鬧夜市、特色咖啡文化與豐富的越南美食。
+無論是歷史探索、美食體驗還是城市觀光，都能感受到西貢獨特的魅力。
 </p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section id="about" class="section">
-<div class="container">
-
-<h2>熱門景點</h2>
-
-<div class="news">
-
-<div class="news-card">
-<h3>聖母大教堂</h3>
-<p>胡志明市最具代表性的紅磚法式建築。</p>
-</div>
-
-<div class="news-card">
-<h3>中央郵局</h3>
-<p>百年歷史地標，充滿法國殖民風情。</p>
-</div>
-
-<div class="news-card">
-<h3>濱城市場</h3>
-<p>體驗越南文化與購買伴手禮的最佳地點。</p>
 </div>
 
 </div>
@@ -246,24 +236,23 @@ nav ul{
 <section id="attractions" class="section">
 <div class="container">
 
-<h2>必訪景點</h2>
+<h2>熱門景點</h2>
 
-<div class="services">
+<div class="news">
 
-<div class="service-box">
-<h3>統一宮</h3>
+<div class="news-card">
+<h3>聖母大教堂</h3>
+<p>胡志明市最著名的法式紅磚教堂地標。</p>
 </div>
 
-<div class="service-box">
-<h3>戰爭遺跡博物館</h3>
+<div class="news-card">
+<h3>中央郵局</h3>
+<p>百年歷史建築，展現濃厚法國殖民風格。</p>
 </div>
 
-<div class="service-box">
-<h3>阮惠步行街</h3>
-</div>
-
-<div class="service-box">
-<h3>西貢河夜遊</h3>
+<div class="news-card">
+<h3>濱城市場</h3>
+<p>體驗越南文化與購買伴手禮的熱門景點。</p>
 </div>
 
 </div>
@@ -274,7 +263,36 @@ nav ul{
 <section id="mustvisit" class="section">
 <div class="container">
 
-    <section id="food" class="section">
+<h2>必訪景點</h2>
+
+<div class="services">
+
+<div class="service-box">
+<h3>統一宮</h3>
+<p>越南歷史的重要見證地。</p>
+</div>
+
+<div class="service-box">
+<h3>戰爭遺跡博物館</h3>
+<p>了解越南歷史的重要場所。</p>
+</div>
+
+<div class="service-box">
+<h3>阮惠步行街</h3>
+<p>胡志明市最熱鬧的街道之一。</p>
+</div>
+
+<div class="service-box">
+<h3>西貢河夜遊</h3>
+<p>欣賞城市夜景與河岸風光。</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="food" class="section">
 <div class="container">
 
 <h2>特色美食</h2>
@@ -306,6 +324,9 @@ nav ul{
 </div>
 </section>
 
+<section id="gallery" class="section">
+<div class="container">
+
 <h2>景點照片</h2>
 
 <div class="gallery">
@@ -317,7 +338,7 @@ nav ul{
 </div>
 </section>
 
-<section id="gallery" class="section">
+<section id="contact" class="section">
 <div class="container">
 
 <h2>旅遊資訊</h2>
@@ -332,10 +353,7 @@ nav ul{
 
 </div>
 </section>
-    
-<section id="contact" class="section">
-<div class="container">
-    
+
 <footer>
 © 2026 Explore Ho Chi Minh City. All Rights Reserved.
 </footer>
