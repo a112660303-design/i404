@@ -65,8 +65,34 @@ nav a:hover{
 
 .banner{
     height:500px;
-    background:url("DJI_0550-HDR-Pano.jpg") center center;
     background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    animation: slideshow 20s infinite;
+}
+
+@keyframes slideshow{
+
+0%{
+    background-image:url("DJI_0550-HDR-Pano.jpg");
+}
+
+25%{
+    background-image:url("Vietnam_Ho-Chi-Minh_City-view_AFotolia_104841939-scaled.webp");
+}
+
+50%{
+    background-image:url("batch____Fotolia_122512162-1.jpg");
+}
+
+75%{
+    background-image:url("Nha-tho-Tan-Dinh-1.jpg");
+}
+
+100%{
+    background-image:url("DJI_0550-HDR-Pano.jpg");
+}
+
 }
 
 .section{
